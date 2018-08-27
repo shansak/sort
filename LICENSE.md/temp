@@ -1,0 +1,40 @@
+
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+template<class T>
+
+
+T sel(T a[],T n)
+{
+     T i,j,mn,temp;
+    for(i=0;i<=n-1;i++)
+    {
+        mn=i;
+        for(j=i+1;j<n;j++)
+            if(a[j]<a[mn]){
+             mn=j;
+        temp=a[i];
+        a[i]=a[mn];
+        a[mn]=temp;
+            }
+
+    }
+}
+int main()
+{
+
+    int i;
+
+    char b[]={'a','r','c','u'};
+    sel<char>(b,4);
+    for(i=0;i<=3;i++)
+
+        cout<<b [i];
+
+
+
+
+}
